@@ -6,13 +6,13 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 14:46:48 by dgerguri          #+#    #+#             */
-/*   Updated: 2022/12/05 18:50:17 by dgerguri         ###   ########.fr       */
+/*   Updated: 2022/12/11 19:50:31 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-char	*ft_free_strjoin(char *s1, char *s2)
+static char	*ft_free_strjoin(char *s1, char *s2)
 {
 	int		i;
 	int		i_s2;
@@ -40,7 +40,7 @@ char	*ft_free_strjoin(char *s1, char *s2)
 	return (str);
 }
 
-char	*unused_in_archive(char *archive)
+static char	*unused_in_archive(char *archive)
 {
 	int		i;
 	int		j;
@@ -69,7 +69,7 @@ char	*unused_in_archive(char *archive)
 	return (unused_part);
 }
 
-char	*line_from_archive(char *archive)
+static char	*line_from_archive(char *archive)
 {
 	int		i;
 	char	*c_line;
@@ -94,7 +94,7 @@ char	*line_from_archive(char *archive)
 	return (c_line);
 }
 
-char	*reading_saving(int fd, char *archive, char *buf)
+static char	*reading_saving(int fd, char *archive, char *buf)
 {
 	int	byte;
 
