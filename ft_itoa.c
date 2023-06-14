@@ -6,11 +6,22 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 13:46:19 by dgerguri          #+#    #+#             */
-/*   Updated: 2022/11/16 20:50:05 by dgerguri         ###   ########.fr       */
+/*   Updated: 2023/06/14 17:35:30 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * The ft_itoa function converts an integer to a string representation.
+ *
+ * This function takes an integer 'n' and converts it into a string representation using ASCII characters.
+ * The resulting string is dynamically allocated and must be freed by the caller to avoid memory leaks.
+ *
+ * The function first determines the length of the resulting string by counting the number of digits in 'n'.
+ * It handles negative numbers by adding a '-' character at the beginning of the string and converting the absolute value of 'n' to a string.
+ * If 'n' is zero, a single character '0' is returned as the string representation.
+*/
 
 static int	int_len(long n)
 {
