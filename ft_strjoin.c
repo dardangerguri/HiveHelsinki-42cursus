@@ -6,11 +6,21 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 20:21:37 by dgerguri          #+#    #+#             */
-/*   Updated: 2022/11/16 20:56:22 by dgerguri         ###   ########.fr       */
+/*   Updated: 2023/06/18 18:05:03 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * The ft_strjoin function concatenates two strings 's1' and 's2' into a newly allocated string.
+ * It returns a pointer to the concatenated string.
+ *
+ * If either 's1' or 's2' is NULL, it returns NULL.
+ * If memory allocation fails, it returns NULL.
+ *
+ * Note: The caller is responsible for freeing the memory allocated by ft_strjoin.
+*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
