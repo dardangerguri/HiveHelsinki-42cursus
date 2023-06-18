@@ -6,11 +6,18 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 22:07:14 by dgerguri          #+#    #+#             */
-/*   Updated: 2022/11/16 20:46:36 by dgerguri         ###   ########.fr       */
+/*   Updated: 2023/06/18 17:48:00 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * The ft_memchr function searches for the first occurrence of the byte 'c' in the first 'n' bytes
+ * of the memory area pointed to by 's'.
+ *
+ * It returns a pointer to the byte found, or NULL if the byte is not found within the given memory area.
+*/
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
