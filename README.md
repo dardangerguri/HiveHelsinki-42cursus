@@ -59,7 +59,7 @@ and, when compiling your code, add the required flags:
 ## Testing
 ### Third-party Testers
 I tested the library with three third-party testers: 
-* [libftTester]([https://github.com/Tripouille/libftTesterlibf](https://github.com/Tripouille/libftTester))
+* [libftTester](https://github.com/Tripouille/libftTester)
 * [libft-unit-test](https://github.com/alelievr/libft-unit-test)
 * [libft-war-machine](https://github.com/0x050f/libft-war-machine)
 ## :exclamation: Notes
