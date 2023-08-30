@@ -6,11 +6,23 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:05:10 by dgerguri          #+#    #+#             */
-/*   Updated: 2022/11/16 21:02:11 by dgerguri         ###   ########.fr       */
+/*   Updated: 2023/06/18 18:07:01 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * The ft_strtrim function trims the leading and trailing characters from the string 's1'
+ * that match any character in the string 'set'.
+ * It returns a newly allocated trimmed string.
+ *
+ * If 's1' is NULL, it returns NULL.
+ * If 'set' is NULL or an empty string, it duplicates 's1' and returns the duplicate.
+ * If memory allocation fails, it returns NULL.
+ *
+ * Note: The caller is responsible for freeing the memory allocated by ft_strtrim.
+*/
 
 static int	starting(const char *s1, const char *set)
 {

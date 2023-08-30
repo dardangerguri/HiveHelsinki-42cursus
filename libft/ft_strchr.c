@@ -6,11 +6,17 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 19:49:31 by dgerguri          #+#    #+#             */
-/*   Updated: 2022/11/16 20:52:27 by dgerguri         ###   ########.fr       */
+/*   Updated: 2023/06/18 18:04:24 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * The ft_strchr function searches for the first occurrence of the character 'c' in the string 's'.
+ *
+ * It returns a pointer to the first occurrence of 'c' in 's', or NULL if 'c' is not found.
+*/
 
 char	*ft_strchr(const char *s, int c)
 {

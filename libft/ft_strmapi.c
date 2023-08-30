@@ -6,11 +6,23 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:34:01 by dgerguri          #+#    #+#             */
-/*   Updated: 2022/11/16 20:58:03 by dgerguri         ###   ########.fr       */
+/*   Updated: 2023/06/18 18:07:43 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * The ft_strmapi function applies the function 'f' to each character of the string 's',
+ * passing its index as the first argument to 'f'. It creates a new string with the modified characters.
+ *
+ * It returns a pointer to the newly allocated string.
+ *
+ * If 's' is NULL, it returns NULL.
+ * If memory allocation fails, it returns NULL.
+ *
+ * Note: The caller is responsible for freeing the memory allocated by ft_strmapi.
+*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

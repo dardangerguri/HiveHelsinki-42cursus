@@ -6,11 +6,22 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 17:33:31 by dgerguri          #+#    #+#             */
-/*   Updated: 2022/11/17 16:19:15 by dgerguri         ###   ########.fr       */
+/*   Updated: 2023/06/18 18:25:57 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * The ft_split function splits the string 's' into an array of strings based on the delimiter 'c'.
+ *
+ * It allocates memory for the array and each individual word using malloc().
+ *
+ * The resulting array of strings is returned.
+ * If the allocation fails, it returns NULL.
+ *
+ * Note: The function uses memory allocation, so make sure to free the allocated memory using free().
+*/
 
 static char	**free_str(char **arr_of_str, int j)
 {

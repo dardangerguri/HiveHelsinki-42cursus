@@ -6,11 +6,21 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:44:50 by dgerguri          #+#    #+#             */
-/*   Updated: 2022/11/01 12:53:40 by dgerguri         ###   ########.fr       */
+/*   Updated: 2023/06/18 17:49:16 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * The ft_memmove function copies 'len' bytes from the memory area pointed to by 'src' to the memory area
+ * pointed to by 'dst'.
+ *
+ * It returns a pointer to the destination memory area 'dst' after the operation.
+ *
+ * Note: Both 'src' and 'dst' must be valid memory areas. If either of them is NULL, the function returns NULL.
+ * If 'dst' and 'src' overlap, the copy is performed in a non-destructive manner.
+ */
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

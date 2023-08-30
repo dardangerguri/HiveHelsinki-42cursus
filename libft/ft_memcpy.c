@@ -6,11 +6,20 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 14:05:13 by dgerguri          #+#    #+#             */
-/*   Updated: 2022/11/01 12:53:10 by dgerguri         ###   ########.fr       */
+/*   Updated: 2023/06/18 17:48:37 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * The ft_memcpy function copies 'n' bytes from the memory area pointed to by 'src' to the memory area
+ * pointed to by 'dest'.
+ *
+ * It returns a pointer to the destination memory area 'dest' after the operation.
+ *
+ * Note: Both 'src' and 'dest' must be valid memory areas. If either of them is NULL, the function returns NULL.
+*/
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
