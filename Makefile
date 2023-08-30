@@ -6,42 +6,55 @@
 #    By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 17:01:59 by dgerguri          #+#    #+#              #
-#    Updated: 2022/12/11 20:51:23 by dgerguri         ###   ########.fr        #
+#    Updated: 2023/08/30 20:30:46 by dgerguri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 CC = cc
-FLAGS = -Wall -Wextra -Werror
-
-RM = rm -f
-
-INCLUDE = ft_printf.h
+FLAGS = -Wall -Wextra -Werror -fsanitize=address
 
 LIBFT_D = ./libft
 LIBFT = ./libft/libft.a
 
-SRC = ft_printf.c unsigned_decimal_printf.c hexadecimal_printf.c
+INCLUDE = -I ./includes/
 
-OBJ = ft_printf.o unsigned_decimal_printf.o hexadecimal_printf.o
+SRC_DIR = ./srcs/
+
+SRC = 	ft_printf.c \
+		unsigned_decimal_printf.c \
+		hexadecimal_printf.c
+
+OBJ_DIR = obj/
+OBJ = $(addprefix $(OBJ_DIR), $(SRC:.c=.o))
+
+GREEN = \033[0;32m
+RED = \033[0;31m
+BLUE = \033[0;34m
+RESET = \033[0m
 
 all: $(NAME)
 
-$(NAME):
-	$(MAKE) -C $(LIBFT_D)
-	cp $(LIBFT) ./$(NAME)
-	$(CC) $(FLAGS) -c $(SRC)
-	ar rcs $(NAME) $(OBJ)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c
+	@mkdir -p $(OBJ_DIR)
+	@$(CC) $(FLAGS) $(INCLUDE) -c $< -o $@
+
+$(NAME): $(OBJ)
+	@echo "$(BLUE)Compiling $(NAME) project! $(RESET)"
+	@$(MAKE) -C $(LIBFT_D)
+	@$(CC) $(FLAGS) $(OBJ) -o $(NAME) -L $(LIBFT_D) -lft
 
 clean:
-	$(MAKE) clean -C $(LIBFT_D)
-	$(RM) $(OBJ)
+	@$(MAKE) clean -C $(LIBFT_D)
+	@$(RM) -r $(OBJ_DIR)
+	@echo "$(RED)Removed object files from $(NAME)!$(RESET)"
 
 fclean: clean
-	$(MAKE) fclean -C $(LIBFT_D)
-	$(RM) $(NAME)
+	@$(MAKE) fclean -C $(LIBFT_D)
+	@$(RM) $(NAME)
+	@echo "$(RED)Removed $(NAME)!$(RESET)"
 
-re: fclean all
+re:fclean all
 
 .PHONY: all clean fclean re
