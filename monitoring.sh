@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # ARCHITECTURE
 	arch=$(uname -a)
 
