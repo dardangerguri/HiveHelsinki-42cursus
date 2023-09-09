@@ -24,7 +24,7 @@ In the end, ft_printf prints the formatted output and returns the number of char
 
 ## Using this get_next_line function
 `make` for it to create the libftprintf.a library! 
-This is not a program, therefore, it needs another file to be compiled with. I wrote a file [main.c](`main.c`) to be able to test the ft_printf and compare it with the actual printf.
+This is not a program, therefore, it needs another file to be compiled with. I wrote a file [`main.c`](main.c) to be able to test the ft_printf and compare it with the actual printf.
 
 So, first you have to:
 ```bash
