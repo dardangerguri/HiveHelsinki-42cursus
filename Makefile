@@ -6,7 +6,7 @@
 #    By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 17:01:59 by dgerguri          #+#    #+#              #
-#    Updated: 2023/08/30 20:30:46 by dgerguri         ###   ########.fr        #
+#    Updated: 2023/09/09 13:28:27 by dgerguri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 $(NAME): $(OBJ)
 	@echo "$(BLUE)Compiling $(NAME) project! $(RESET)"
 	@$(MAKE) -C $(LIBFT_D)
-	@$(CC) $(FLAGS) $(OBJ) -o $(NAME) -L $(LIBFT_D) -lft
+	@ar -rcs $(NAME) $(OBJ)
 
 clean:
 	@$(MAKE) clean -C $(LIBFT_D)
