@@ -6,14 +6,14 @@
 #    By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/06 17:01:59 by dgerguri          #+#    #+#              #
-#    Updated: 2023/09/09 13:28:27 by dgerguri         ###   ########.fr        #
+#    Updated: 2023/09/09 16:05:54 by dgerguri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 CC = cc
-FLAGS = -Wall -Wextra -Werror -fsanitize=address
+FLAGS = -Wall -Wextra -Werror
 
 LIBFT_D = ./libft
 LIBFT = ./libft/libft.a
@@ -43,6 +43,7 @@ $(OBJ_DIR)%.o: $(SRC_DIR)%.c
 $(NAME): $(OBJ)
 	@echo "$(BLUE)Compiling $(NAME) project! $(RESET)"
 	@$(MAKE) -C $(LIBFT_D)
+	@cp $(LIBFT) $(NAME)
 	@ar -rcs $(NAME) $(OBJ)
 
 clean:
