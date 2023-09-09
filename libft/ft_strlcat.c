@@ -6,7 +6,7 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 16:31:09 by dgerguri          #+#    #+#             */
-/*   Updated: 2023/06/18 18:20:31 by dgerguri         ###   ########.fr       */
+/*   Updated: 2023/09/09 13:30:49 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[i] = *src++;
 		i++;
 	}
-		dst[i] = '\0';
+	dst[i] = '\0';
 	return (destlen + srclen);
 }

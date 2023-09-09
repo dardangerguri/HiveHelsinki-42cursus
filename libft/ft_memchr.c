@@ -6,7 +6,7 @@
 /*   By: dgerguri <dgerguri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 22:07:14 by dgerguri          #+#    #+#             */
-/*   Updated: 2023/06/18 17:48:00 by dgerguri         ###   ########.fr       */
+/*   Updated: 2023/09/09 13:30:29 by dgerguri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (str[i] == character)
 			return (str + i);
-	i++;
+		i++;
 	}
 	return (NULL);
 }
