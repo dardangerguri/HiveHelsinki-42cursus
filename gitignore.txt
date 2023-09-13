@@ -1,0 +1,7 @@
+.DS_Store
+a.out
+so_long
+libft.a
+.vscode
+libft/obj/
+obj/
