@@ -1,15 +1,13 @@
 # Born2BeRoot
 
-The Born2beroot project at Hive (42 school) is an immersive learning experience in system administration. Through this project, we will learn how to:
+Immersive learning experience in system administration, focusing on virtualization, partioning, command-line software, and system security.
 
-- Install and configure a virtual machine
-- Explore virtualization technologies
-- Learn about partitioning schemes
-- Gain proficiency in Logical Volume Management (LVM)
-- Master command-line software for system administration
-- Understand secure protocols like SSH
-- Appreciate the importance of system security through sudo, firewalls, and password policies
+## About the project
 
-By completing this project, we develop essential skills and knowledge to excel in system administration.
+The Born2BeRoot project, part of the 42 curriculum, delves into the core concepts of system administration, requiring us to set up and manage a virtual machine. This journey equips us with knowledge about virtualization, disk partitioning strategies, Logical Volume Management (LVM), command-line utilities, secure protocols like SSH, and the criticality of system security through the use of sudo, firewalls, and robust password policies.
 
-[`Born2BeRoot`](Born2BeRoot.md) covers most of the topics and tools, I expolored during this project!
+## Files
+
+- `Born2BeRoot.md`: This file contains detailed information about the topics and tools I explored during this project.
+
+- `monitoring.sh`: This file is a a shell script used in the Born2BeRoot for monitoring purposes. It collects and displays information about the system, including architecture, physical and virtual CPU count, memory usage, disk usage, CPU load, last reboot time, LVM usage, TCP connections, logged-in users, network information (IP and MAC addresses), and the count of executed sudo commands.

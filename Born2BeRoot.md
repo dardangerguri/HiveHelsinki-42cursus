@@ -1,6 +1,6 @@
 ### What is a Virtual Machine and how does it work?
 
-A virtual machine is a software program that emulates the hardware of a physical computer. It enables you to run multiple operating systems on a single physical computer, each operating system running in its own virtual environment. The physical computer on which the virtual machine is installed is called the host machine. The host machine's hardware is used by the virtual machine, allowing the virtual machine to access the same CPU, memory, and storage as the host machine. The host machine runs a hypervisor which is a program that allows multiple operating systems to utilize the same hardware. The hypervisor acts as a mediator between the hardware and the operating systems, distributing the hardware resources to the various operating systems as needed. So, the operating system runs in a virtual environment with hypervisor help, and gives the impression to the operating system that it is running on a physical machine. Virtual machine allows to easily switch between operating systems and applications on the same computer without having to restart the host machine. 
+A virtual machine is a software program that emulates the hardware of a physical computer. It enables you to run multiple operating systems on a single physical computer, each operating system running in its own virtual environment. The physical computer on which the virtual machine is installed is called the host machine. The host machine's hardware is used by the virtual machine, allowing the virtual machine to access the same CPU, memory, and storage as the host machine. The host machine runs a hypervisor which is a program that allows multiple operating systems to utilize the same hardware. The hypervisor acts as a mediator between the hardware and the operating systems, distributing the hardware resources to the various operating systems as needed. So, the operating system runs in a virtual environment with hypervisor help, and gives the impression to the operating system that it is running on a physical machine. Virtual machine allows to easily switch between operating systems and applications on the same computer without having to restart the host machine.
 
 
 ### What is your choice of Operating System?
@@ -17,10 +17,10 @@ Rocky Linux is a new Linux distribution that is designed to be compatible with R
 
 They allow you to run multiple operating systems on a single physical computer, and can be used for a variety of purposes, such as:
 
-° Testing software: Virtual machines can be used to test software in a variety of different environments, without the need to have multiple physical computers.
-° Isolation: Virtual machines can be used to isolate certain processes or applications from the rest of the system, which can be useful for security or stability reasons.
-° Compatibility: Virtual machines can be used to run older software that may not be compatible with newer operating systems.
-° Development environments: Virtual machines can be used to create development environments that mimic production environments, allowing developers to test their code in a more realistic setting.
+- Testing software: Virtual machines can be used to test software in a variety of different environments, without the need to have multiple physical computers.
+- Isolation: Virtual machines can be used to isolate certain processes or applications from the rest of the system, which can be useful for security or stability reasons.
+- Compatibility: Virtual machines can be used to run older software that may not be compatible with newer operating systems.
+- Development environments: Virtual machines can be used to create development environments that mimic production environments, allowing developers to test their code in a more realistic setting.
 
 
 ### What are differences between `aptitude` and `apt`?
@@ -95,7 +95,7 @@ Test if it follows the password policy!
 
 ### Create 'evaluating' group and add the created user to the group!
 
-``` bash 
+``` bash
 sudo addgroup evaluating
 sudo adduser 'username' evaluating
 ```
@@ -115,12 +115,12 @@ sudo groups 'username'
 
 The main benefit of strong password policy implementation is that they can help create unique and hard-to-crack passwords by requiring the use of a combination of letters, numbers, and characters. However, these policies are not always effective as there can be diminishing returns in terms of increasing password complexity. While a longer password with more characters may be more difficult to crack, it may also be harder for the user to remember and may not provide much additional security if hackers are aware that longer passwords are frequently used. It is important to find a balance between password complexity and usability to ensure that passwords are both secure and easy for users to remember.
 
- 
+
 ## HOSTNAME AND PARTITIONS
 
 ### Check that the hostname is 'login42'!
 
-``` bash 
+``` bash
 hostname
 ```
 or
@@ -139,8 +139,8 @@ reboot
 
 ### Restore
 
-``` bash 
-su - 
+``` bash
+su -
 vim /etc/hostname #change it back to login42!
 reboot
 ```
@@ -191,16 +191,16 @@ Sudo (short for "superuser do") is a command used to allow users with proper per
 
 There are several reasons why sudo is important:
 
-° Security: By requiring users to enter their own password before executing commands with sudo, the system can ensure that only authorized users are able to perform administrative tasks. This can help prevent accidental or malicious damage to the system.
-° Separation of duties: sudo allows multiple users to share a single system without giving them all access to the root account. This can be useful in environments where different users are responsible for different tasks, as it allows them to perform their tasks without granting unnecessary privileges.
-° Auditing: sudo logs all commands executed with it, which can be useful for tracking changes to the system and identifying problems.
-° Convenience: sudo allows users to perform administrative tasks without logging in as the root user. This can be more convenient for users who don't need to perform administrative tasks regularly, as they don't have to remember the root password.
+- Security: By requiring users to enter their own password before executing commands with sudo, the system can ensure that only authorized users are able to perform administrative tasks. This can help prevent accidental or malicious damage to the system.
+- Separation of duties: sudo allows multiple users to share a single system without giving them all access to the root account. This can be useful in environments where different users are responsible for different tasks, as it allows them to perform their tasks without granting unnecessary privileges.
+- Auditing: sudo logs all commands executed with it, which can be useful for tracking changes to the system and identifying problems.
+- Convenience: sudo allows users to perform administrative tasks without logging in as the root user. This can be more convenient for users who don't need to perform administrative tasks regularly, as they don't have to remember the root password.
 
 Overall, sudo is an important tool for managing access to administrative tasks and is essential for maintaining security, separation of duties, and auditability on these systems.
 
 ### Verify that the '/var/log/sudo/' folder has one file!
 
-``` bash	
+``` bash
 sudo ls /var/log/sudo
 sudo cat sudo.log # might be a different name
 ```
@@ -240,7 +240,7 @@ UFW allows users to create rules that control incoming and outgoing network traf
 ### Check if port 4242 is included in the list of active rules!
 
 ``` bash
-sudo ufw status 
+sudo ufw status
 ```
 
 ### Add a new rule to open port 8080!
@@ -351,7 +351,7 @@ disk_utilization=$(df -Bm | grep '^/dev/' | grep -v '/boot$' | awk '{used_total 
 ```
 These commands are used to find information about the disk usage and utilization. Here is what each command does:
 
-1. The disk_used command is used to display the total amount of used disk space.	
+1. The disk_used command is used to display the total amount of used disk space.
 	1.1 df -Bm: This command displays information about the disk space usage on the system. The -Bm flag tells df to display the sizes of files and directories in megabytes.
 	1.2 grep "^/dev/": This command filters the output of the df command to include only lines that begin with the string "/dev/".
 	1.3 grep -v "boot": This command filters the output of the previous grep command to exclude lines containing the string "boot".
@@ -449,7 +449,7 @@ Cron is a time-based job scheduling utility that allows users to schedule tasks 
 ``` bash
 sudo crontab -e
 ```
-The following line is added: 
+The following line is added:
 ```
 */10 * * * * sh /home/'username'/monitoring.sh
 ```
@@ -463,7 +463,7 @@ The script should pop up every 10 min!
 ``` bash
 sudo crontab -e
 ```
-The following line is added: 
+The following line is added:
 ```
 */1 * * * * sh /home/'username'/monitoring.sh
 ```
