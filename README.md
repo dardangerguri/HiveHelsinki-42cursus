@@ -82,7 +82,7 @@ int	main(void)
 	return (0);
 }
 ```
-**Important**
+**Important:**
 Ensure the files exist for the program to function correctly!
 
 **1. Clone the Git Repository:**
