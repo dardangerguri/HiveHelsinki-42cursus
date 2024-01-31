@@ -1,22 +1,27 @@
 # get_next_line
-Reading from a file descriptor and understanding the use of static variables.
+
+Understanding file descriptor reading and the application of static variables.
+
 ## About the project
 
-The get_next_line is a project at Hive Helsinki (42 School) that helps to learn how to read from a file descriptor and understand the concept of static variables.
+The get_next_line project provides a practical approach to understanding file descriptor reading and the application of static variables.
 
-The "get_next_line" function retrieves one line at a time from a specified file. If you call this function in a loop, it will gradually return the entire contents of the file, one line at a time, until it reaches the end of the file. You can customize the buffer size used by the function when you compile it, allowing you to adapt it to different situations.
+The get_next_line function is designed to retrieve a single line from a specified file. When this function is called in a loop, it sequentially returns the entire file content, one line at a time, until it reaches the end of the file. The buffer size used by the function can be customized during compilation, allowing for adaptability to various scenarios.
 
-What makes this function interesting is its ability to remember the state of the data it has read between consecutive calls. This means that it can pick up where it left off in the previous call and continue reading from there, ensuring that each line is retrieved properly.
+A unique feature of this function is its ability to remember the state of the data it has read between consecutive calls. This allows it to resume reading from where it left off in the previous call, ensuring proper retrieval of each line.
 
-The main advantage of this implementation is that it can handle files of any size because it reads and returns data incrementally, rather than loading the entire file into memory all at once. This approach is memory-efficient and particularly useful when dealing with large files that may exceed the available memory.
+The primary advantage of this implementation is its capacity to handle files of any size. It achieves this by incrementally reading and returning data, instead of loading the entire file into memory at once. This memory-efficient approach is particularly beneficial when dealing with large files that could potentially exceed available memory.
 
-By working on the "get_next_line" project, you will gain practical experience in file input/output operations, understand how static variables work, and learn about memory management techniques. Additionally, you will develop a deeper understanding of reading data line by line, which is a common task in many programming scenarios.
 
-## Bonus
-The get_next_line bonus, has the same functionality of the initial project but can handle multiple file descriptors at the same time. Also, if the mandatory part wasn't written with only one static variable, the bonus should use only one.
+By working on the get_next_line project, you will gain practical experience in file I/O operations, gain a deeper understanding of static variables, and learn about memory management techniques. Furthermore, you will develop a comprehensive understanding of line-by-line data reading, a common task in various programming scenarios.
 
-## Using this get_next_line function
-The functions are written in C language and thus needs the **`gcc` compiler**. This is not a program, therefore, it needs another file to be compiled with. For example, you can add this main function for it to work.
+## Bonus Features
+
+The get_next_line bonus version retains the functionality of the initial project but can handle multiple file descriptors simultaneously. If the mandatory part was not written with a single static variable, the bonus version should only use one.
+
+## Running the project
+
+The functions are written in the C programming language and require the `gcc` compiler. As this is not a standalone program, it needs to be compiled with another file. For instance, you can add the following main function for it to work:
 
 ```C
 #include <fcntl.h>
@@ -38,7 +43,9 @@ int main(void)
     return (0);
 }
 ```
-The bonus main:
+
+For the bonus version, use the following main function:
+
 ```C
 #include <fcntl.h>
 #include <stdio.h>
@@ -75,25 +82,31 @@ int	main(void)
 	return (0);
 }
 ```
-**Note**
-The files should exist for the program to work properly!
+**Important**
+Ensure the files exist for the program to function correctly!
 
-**1. Clone  the git repository into your computer:**
+**1. Clone the Git Repository:**
+
 ```shell
 git clone https://github.com/dardangerguri/get_next_line.git get_next_line
 cd get_next_line
 ```
 **2. Compiling the library**
 
-After adding the main file, to compile the program, run:
+After adding the main file, compile the program as follows:
+
 ```shell
 gcc main.c get_next_line.c get_next_line_utils.c
 ```
-or, for the bonus
+
+For the bonus version:
+
 ```shell
 gcc main.c get_next_line_bonus.c get_next_line_utils_bonus.c
 ```
-or, if you want to specify the BUFFER_SIZE in the compilation run this:
+
+To specify the BUFFER_SIZE during compilation:
+
 ```bash
 gcc -D BUFFER_SIZE=42 main.c get_next_line.c get_next_line_utils.c
 ```
@@ -101,7 +114,3 @@ gcc -D BUFFER_SIZE=42 main.c get_next_line.c get_next_line_utils.c
 ```bash
 ./a.out
 ```
-## Testing
-### Third-party tester
-I tested the library with this third-party tester: 
-* [gnlTester](https://github.com/Tripouille/gnlTester.git)
