@@ -35,7 +35,7 @@ It can handle to commands:
 ./pipex input_file cmd1 cmd2 output_file
 ```
 
-`make bonus` for it to compile the bonus part!
+`make bonus` for the bonus part to compile!
 
 First bonus part is similar to mandatory part, however it handels multiple pipes:
 
