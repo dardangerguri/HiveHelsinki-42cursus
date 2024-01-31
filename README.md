@@ -1,37 +1,52 @@
 # so_long
-https://github.com/dardangerguri/RandomThings/assets/117037140/5774ef81-377c-40b4-b3fc-3f85a7ac8ce2
+
+![](so_long.gif)
+
 ## About the project
-The so_long project at Hive (42 school) is a 2D game development project that introduces us to graphics programming using the Minilibx library. Its purpose is to make us work with textures, sprites, and some other very basic gameplay elements.
 
-"so_long" is a simple game where the player navigates through a maze while collecting collectibles and avoiding obstacles. The goal is to reach the exit to win the game.
+The so_Long project, a part of the curriculum at Hive (42 school), is a comprehensive introduction to 2D game development. This project leverages the Minilibx library to delve into the fundamentals of graphics programming, including the use of textures, sprites, and other basic gameplay elements.
 
-In the mandatory segment of the game, player is a thief. The core mission of the player is to gather coins throughout the maze. Victory is achieved when all coins have been collected, and the player stands at the exit door.
+### Game overview
 
-The bonus segment, in addition to coin collection and exit door navigation, player must avoid an enemy patrol, a police car. Moreover, the exit door in this stage is animated. It unlocks only after all collectibles have been collected.
+The so_Long is a maze navigation game where the player's objective is to collect items while avoiding various obstacles. The ultimate goal is to reach the exit and secure a win.
 
-Floodfill algorithm is used to validate the maze's navigability, ensuring a possible path for the player to collect all the collectibles and reach the exit.
+### Game segments
+
+#### Mandatory segment
+
+In the mandatory segment, the player assumes the role of a thief whose primary mission is to gather coins scattered throughout the maze. The game is won when all coins are collected and the player successfully reaches the exit door.
+
+#### Bonus segment
+
+The bonus segment adds an extra layer of complexity. In addition to collecting coins and finding the exit, the player must also evade an enemy patrol, represented by a police car. The exit door in this stage is animated and only unlocks after all collectibles have been secured.
+
+### Maze validation
+
+The game employs the Floodfill algorithm to validate the maze's navigability. This ensures that there is always a feasible path for the player to collect all the items and reach the exit.
 
 ## Play the game
-#### Install
+
+To run the game, first clone the repository and navigate into the project directory. Then, use the `make` command to compile the project.
+
+Once the project is compiled, you can run it with the following command:
+
 ``` bash
-git clone git@github.com:dardangerguri/so_long.git so_long
-cd so_long
+./so_long <map.ber>
 ```
-To compile manadatory part:
-```bash
-make
-```
+
 To compile the bonus part:
 ```bash
 make bonus
 ```
 Run the game:
 ```bash
-./so_long valid_map.ber
+./so_long <valid_map.ber>
 ```
-#### Maps
+
+### Maps
+
 You will be able to play the game with any map, that follows the rules below:
-* is a ``.ber`` file, 
+* is a ``.ber`` file,
 * only contains 1 -Wall, 0 - Empty space, C - Collectible, E - Exit, P - Player, and D - Enemy.
 * is sorrounded by walls,
 * has only one player, exit, and enemy (optional),
@@ -39,5 +54,5 @@ You will be able to play the game with any map, that follows the rules below:
 
 There are some valid maps, in the [`maps`](maps) directory!
 
-#### Controls
+### Controls
 To move the player use the ``WASD`` keys. The player will move on all the directions, expect on through the walls.
