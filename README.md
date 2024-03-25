@@ -4,7 +4,7 @@
 
 ## About the project
 
-The so_Long project, a part of the curriculum at Hive (42 school), is a comprehensive introduction to 2D game development. This project leverages the Minilibx library to delve into the fundamentals of graphics programming, including the use of textures, sprites, and other basic gameplay elements.
+The so_long project, a part of the curriculum at Hive (42 school), is a comprehensive introduction to 2D game development. This project leverages the Minilibx library to delve into the fundamentals of graphics programming, including the use of textures, sprites, and other basic gameplay elements.
 
 ### Game overview
 
